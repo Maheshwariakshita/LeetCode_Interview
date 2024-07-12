@@ -1,58 +1,31 @@
 class Solution:
 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        i=0
-        j=len(nums)-1
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
+
+        # 1
+        # i=0
+        # j=len(nums)-1
+        # for i in range(len(nums)):
+        #     for j in range(i+1,len(nums)):
+        #         if nums[i]+nums[j]==target:
+        #             return [i,j]
                
        
        
        
        
-       
-        # #two pointer
-        # i=0
-        # j=len(nums)-1
-        # while i<j:
-        #     if nums[i]+nums[j]==target:
-        #         return [i, j]
-        #     i+=1
-        #     j-=1
-        # return
+        # 2
+        h = {}
+
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in h:
+                return [h[diff], i]  # Correct order of indices
+            else:
+                h[num] = i  # Store the index as the value
+        return []
 
 
-
-
-
-
-# class Solution:
-
-#     def twoSum(self, nums: List[int], target: int) -> List[int]:
-#         h={}
-
-#         for i, j in enumerate(nums):
-#             diff=target-j
-#             if diff in h:
-#                 return [j, h[j]]
-#             else:
-#                 h[j]=i
-
-
-
-# class Solution:
-
-#     def twoSum(self, nums: List[int], target: int) -> List[int]:
-
-#         for i in range (len(a)):
-#             for j in range (i+1,len(a)):
-#                 if a[i]+a[j]==sum:
-#                     if(a[i]<a[j]):
-#                         print(a[i]," ",a[j])
-#                     else:
-#                         print(a[j]," ",a[i])
 
 
 
