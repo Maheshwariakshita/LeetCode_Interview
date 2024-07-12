@@ -1,32 +1,18 @@
 class Solution:
 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-            h={}
-            for curr in nums:
-                if curr+h[target-curr]==target:
-                    return [curr,target-curr]
-                    
-                else:
-                    h[target-curr]=curr
+        i=0
+        j=len(nums)-1
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return [i,j]
+               
        
        
        
        
        
-       
-       
-        # i=0
-        # j=len(nums)-1
-        # while i<j:
-        #     if nums[i]+nums[j]==target:
-        #         return [i,j]
-        #     elif 
-
-
-
-
-
-
         # #two pointer
         # i=0
         # j=len(nums)-1
@@ -36,22 +22,6 @@ class Solution:
         #     i+=1
         #     j-=1
         # return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -96,23 +66,16 @@ class Solution:
 
 
 
-
-
-
-
-
-
-
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums = enumerate(nums)
-        nums = sorted(nums, key=lambda x:x[1])
-        l, r = 0, len(nums)-1
-        while l < r:
-            if nums[l][1]+nums[r][1] == target:
-                return sorted([nums[l][0], nums[r][0]])
-            elif nums[l][1]+nums[r][1] < target:
-                l += 1
-            else:
-                r -= 1
-        return 
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         nums = enumerate(nums)
+#         nums = sorted(nums, key=lambda x:x[1])
+#         l, r = 0, len(nums)-1
+#         while l < r:
+#             if nums[l][1]+nums[r][1] == target:
+#                 return sorted([nums[l][0], nums[r][0]])
+#             elif nums[l][1]+nums[r][1] < target:
+#                 l += 1
+#             else:
+#                 r -= 1
+#         return 
