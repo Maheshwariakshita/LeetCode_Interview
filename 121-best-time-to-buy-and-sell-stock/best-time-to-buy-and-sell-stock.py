@@ -4,6 +4,15 @@ class Solution:
         #2 pointer approach 0, len-1-> 
         #3 max, min- diff 
 
+        # # 1 bf
+        # ans=0
+        # for i in range(len(prices)):
+        #     for j in range(i+1, len(prices)):
+        #         ans=max(ans, prices[j]-prices[i])
+        # return ans
+
+        # with dp
+
         mini=prices[0]
         ans=0
         for i in range(len(prices)):
