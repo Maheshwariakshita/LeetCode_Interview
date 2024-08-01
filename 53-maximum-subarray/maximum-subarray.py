@@ -1,4 +1,4 @@
-
+#3 one loop
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         if len(nums)==0:
@@ -16,14 +16,7 @@ class Solution:
 
 
 
-
-
-
-
-
-
-
-# 2
+# 2 kadane,,,,,
 # import sys
 # class Solution:
 #     def maxSubArray(self, arr: List[int]) -> int:
@@ -37,7 +30,7 @@ class Solution:
 #                 sum = 0
 #         return maxi
 
-# 1
+# 1 two loops
 # class Solution:
 #     def maxSubArray(self, arr: List[int]) -> int:
 #         if len(arr)==0:
