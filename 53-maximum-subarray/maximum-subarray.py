@@ -1,17 +1,43 @@
-import sys
+
 class Solution:
-    def maxSubArray(self, arr: List[int]) -> int:
-        maxi = -sys.maxsize-1  # maximum sum
-        sum = 0
-        for num in arr:
-            sum += num
-            if sum > maxi:
-                maxi = sum
-            if sum < 0:
-                sum = 0
-        return maxi
+    def maxSubArray(self, nums: List[int]) -> int:
+        if len(nums)==0:
+            return 
+        if len(nums)==1:
+            return nums[0]
+        # if len(nums)==2:
+        #     return max(nums[0], nums[1], nums[0]+nums[1])
+        ans=nums[0]
+        a=nums[0]
+        for i in range(1,len(nums)):
+            a=max(nums[i], a+nums[i])
+            ans=max(a, ans)
+        return ans
 
 
+
+
+
+
+
+
+
+
+# 2
+# import sys
+# class Solution:
+#     def maxSubArray(self, arr: List[int]) -> int:
+#         maxi = -sys.maxsize-1  # maximum sum
+#         sum = 0
+#         for num in arr:
+#             sum += num
+#             if sum > maxi:
+#                 maxi = sum
+#             if sum < 0:
+#                 sum = 0
+#         return maxi
+
+# 1
 # class Solution:
 #     def maxSubArray(self, arr: List[int]) -> int:
 #         if len(arr)==0:
