@@ -11,7 +11,7 @@ class Solution:
         #         ans=max(ans, prices[j]-prices[i])
         # return ans
 
-        # with dp
+        # 2 with dp
 
         mini=prices[0]
         ans=0
