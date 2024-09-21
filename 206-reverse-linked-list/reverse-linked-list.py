@@ -8,16 +8,9 @@ class Solution:
         #rec
         if head is None or head.next is None:
             return head
-        curr=head
-        prev=None
+        
         a=self.reverseList(head.next)
         head.next.next=head
-        head.next=None
-        # while curr:
-        #     curr_temp=curr.next
-        #     curr.next=prev
-        #     prev=curr
-        #     curr=curr_temp
         head.next=None
         return a
 
